@@ -10,11 +10,11 @@ function Main({ children }: MainProps){
   return (
     <Box as="main">
       <Head>
-        <meta name="description" content="Coloque uma descrição" />
-        <meta name="author" content="Coloque seu nome" />
-        <meta property="og:site_name" content="Coloque o nome do site" />
-        <meta property="og:type" content="Coloque o tipo do site" />
-        <title>Example</title>
+        <meta name="description" content="Ecommerce " />
+        <meta name="author" content="Diego Alessandro da Cruz Martins " />
+        <meta property="og:site_name" content="Ecommerce" />
+        <meta property="og:type" content="website" />
+        <title>Ecommerce</title>
       </Head>
       <Container maxW="container.md">
         {children}
