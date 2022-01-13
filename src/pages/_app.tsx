@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     <ChakraProvider theme={theme}>
       <Fonts />
       <AnimatePresence exitBeforeEnter initial={true}>
-        <Main>
+        <Main router={router}>
           <GlobalStyles />
           <Component {...pageProps} key={router.route} />
         </Main>

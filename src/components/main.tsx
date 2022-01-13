@@ -1,12 +1,15 @@
 import Head from "next/head"
 import { Box, Container } from "@chakra-ui/react"
 import { ReactNode } from "react"
+import Navbar from "./navbar"
+import { NextRouter } from "next/router"
 
 interface MainProps {
   children: ReactNode
+  router: NextRouter
 }
 
-function Main({ children }: MainProps){
+function Main({ children, router }: MainProps){
   return (
     <Box as="main">
       <Head>
@@ -16,7 +19,8 @@ function Main({ children }: MainProps){
         <meta property="og:type" content="website" />
         <title>Ecommerce</title>
       </Head>
-      <Container maxW="container.md">
+      <Navbar path={router} />
+      <Container maxW="container.md" mt="60px">
         {children}
       </Container>
     </Box>
