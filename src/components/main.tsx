@@ -20,7 +20,7 @@ function Main({ children, router }: MainProps){
         <title>Ecommerce</title>
       </Head>
       <Navbar path={router} />
-      <Container maxW="container.md" mt="60px">
+      <Container maxW="container.lg" mt="60px">
         {children}
       </Container>
     </Box>

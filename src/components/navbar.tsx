@@ -1,7 +1,9 @@
 import NextLink from "next/link"
-import { Box, Flex, Heading, HStack, Link } from "@chakra-ui/react"
+import { Box, Flex, Heading, HStack, IconButton, Link } from "@chakra-ui/react"
 import { NextRouter } from "next/router"
 import {  ReactNode } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 
 interface NavbarProps {
   path: NextRouter
@@ -15,13 +17,9 @@ interface LinkItemProps {
 }
 
 const LinkItem = ({ href, path, children, ...props }: LinkItemProps) => {
-  // const isActive = path.asPath === href
-  const activeColor = ""
-  const inativeColor = ""
-
   return(
     <NextLink href={href} passHref>
-      <Link {...props}>
+      <Link textDecor="none" {...props}>
         {children}
       </Link>
     </NextLink>
@@ -44,6 +42,10 @@ export default function Navbar({ path }: NavbarProps){
           Produtos
         </LinkItem>
       </HStack>
+      <IconButton 
+        aria-label="carrinho de compras"
+        icon={<FontAwesomeIcon icon={faShoppingCart} />}
+      />
     </Flex>
   )
 }

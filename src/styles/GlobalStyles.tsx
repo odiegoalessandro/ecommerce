@@ -20,6 +20,9 @@ const GlobalStyles: React.FC = ({ children }) => {
           min-height: 100vh;
           overflow-x: hidden;
         }
+        body{
+          background: #EDEDED;
+        }
         ::-webkit-scrollbar {
           display: none;
         }
