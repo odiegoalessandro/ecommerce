@@ -11,9 +11,7 @@ interface HomeProps {
   prices: Price[]
 }
 
-export default function Home({ prices }: HomeProps) {
-
-
+export default function Home({ prices }: HomeProps) {  
   return (
     <Flex minH="calc(100vh - 60px)" pt={10} flexWrap="wrap" justify="center">
       {
@@ -77,7 +75,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const prices = await stripe.prices.list({
     active: true,
     limit: 10,
-    expand: ["data.product"]
+    expand: ["data.product"]  
   })
 
   return {
