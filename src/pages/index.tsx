@@ -13,8 +13,6 @@ interface HomeProps {
 }
 
 export default function Home({ prices }: HomeProps) {  
-  const { cart } = useCart()
-  console.log(cart)
   return (
     <Flex minH="calc(100vh - 60px)" pt={10} flexWrap="wrap" justify="center">
       {

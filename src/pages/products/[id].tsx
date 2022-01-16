@@ -19,7 +19,6 @@ export default function Id({ product }: IdProps){
   const [quantity, setQuantity] = useState(1)
   const { addItem, cart, removeItem } = useCart()
 
-  console.log(cart)
   return (
     <Flex pt={10} minH="calc(100vh - 60px)">
       <Flex
