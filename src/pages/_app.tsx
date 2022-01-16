@@ -5,6 +5,7 @@ import theme from "../lib/chakra-theme"
 import GlobalStyles from "../styles/GlobalStyles"
 import Main from "../components/main"
 import Fonts from "../components/fonts"
+import { CartContextProvider } from "../contexts/cartContext"
 
 
 function MyApp({ Component, pageProps, router }: AppProps) {
@@ -12,9 +13,12 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     <ChakraProvider theme={theme}>
       <Fonts />
       <AnimatePresence exitBeforeEnter initial={true}>
-        <Main>
-          <GlobalStyles />
-          <Component {...pageProps} key={router.route} />
+        <Main router={router}>
+          <CartContextProvider>
+            <GlobalStyles />
+            <Component {...pageProps} key={router.route} />
+
+          </CartContextProvider>
         </Main>
       </AnimatePresence>
     </ChakraProvider>

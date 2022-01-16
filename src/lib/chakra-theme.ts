@@ -6,8 +6,8 @@ const styles = {}
 const components = {}
 
 const fonts = {
-  heading: "sans-serif",
-  body: "sans-serif"
+  heading: "-apple-system, system-ui, sans-serif",
+  body: "system-ui, sans-serif"
 }
 
 const colors = {}
