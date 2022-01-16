@@ -35,7 +35,7 @@ export const CartContext = createContext({} as CartContextData)
 
 export function CartContextProvider({ children }: CardContextProviderProps){  
   const initialValue: CartData | any = { items: [], totalItems: 0, totalPrice: 0 }
-  
+
   function cartReducer(state: CartData, action: ActionData){
     switch(action.type){
       case "ADD":
