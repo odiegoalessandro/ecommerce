@@ -91,19 +91,6 @@ export default function Id({ product }: IdProps){
             >
               Adicionar ao carrinho
             </Button>
-            <Button 
-              bgColor="#252525"
-              mt={5}
-              w="full"
-              h="3rem"
-              color="#eaeaea"
-              _hover={{
-                bgColor: "#444444"
-              }}
-              onClick={() => removeItem(product.id)}
-            >
-              Remover do carrinho
-            </Button>
           </div>
         </Box>
       </Flex>
