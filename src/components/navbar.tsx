@@ -42,10 +42,12 @@ export default function Navbar({ path }: NavbarProps){
           Produtos
         </LinkItem>
       </HStack>
-      <IconButton 
-        aria-label="carrinho de compras"
-        icon={<FontAwesomeIcon icon={faShoppingCart} />}
-      />
+      <NextLink href="/cart">
+        <IconButton
+          aria-label="carrinho de compras"
+          icon={<FontAwesomeIcon icon={faShoppingCart} />}
+        />
+      </NextLink>
     </Flex>
   )
 }
