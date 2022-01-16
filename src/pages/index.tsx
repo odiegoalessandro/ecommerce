@@ -2,6 +2,7 @@ import { Box, Divider, Flex, Heading, Text, LinkBox, LinkOverlay } from "@chakra
 import { GetStaticProps } from "next"
 import NextImage from "next/image"
 import Stripe from "stripe"
+import { useCart } from "../contexts/cartContext"
 
 interface Price extends Stripe.Price{
   product: Stripe.Product
@@ -12,6 +13,8 @@ interface HomeProps {
 }
 
 export default function Home({ prices }: HomeProps) {  
+  const { cart } = useCart()
+  console.log(cart)
   return (
     <Flex minH="calc(100vh - 60px)" pt={10} flexWrap="wrap" justify="center">
       {
