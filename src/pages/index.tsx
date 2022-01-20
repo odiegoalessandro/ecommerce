@@ -13,6 +13,8 @@ interface HomeProps {
 }
 
 export default function Home({ prices }: HomeProps) {  
+  console.log(prices[0])
+
   return (
     <Flex minH="calc(100vh - 60px)" pt={10} flexWrap="wrap" justify="center">
       {
